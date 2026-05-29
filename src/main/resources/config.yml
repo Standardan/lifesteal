@@ -1,0 +1,17 @@
+# Lifesteal configuration.
+
+# Hearts a brand-new player starts with (1 heart = 2 health points).
+starting-hearts: 10
+# Highest number of hearts a player can reach.
+max-hearts: 20
+# If a death would drop a player to BELOW this many hearts, they are eliminated
+# instead of just losing a heart. 1 => elimination happens at 0 hearts.
+min-hearts: 1
+
+# What happens when a player is eliminated:
+#   ban       - kicked and blocked from rejoining until revived
+#   spectator - kept on the server in spectator mode until revived
+elimination: ban
+
+# Drop a Heart item when a player is eliminated, so the killer can claim it.
+drop-heart-on-elimination: true

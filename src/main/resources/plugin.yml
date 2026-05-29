@@ -1,0 +1,30 @@
+name: Lifesteal
+version: '${project.version}'
+main: io.github.standardan.lifesteal.LifestealPlugin
+api-version: '1.21'
+description: Hardcore lifesteal SMP - steal a heart on kill, elimination at zero, heart items and revives.
+author: Standardan
+
+libraries:
+  - org.xerial:sqlite-jdbc:3.46.1.3
+
+commands:
+  lifesteal:
+    description: Admin commands (reload, sethearts, revive).
+    usage: /lifesteal <reload|sethearts|revive> [args]
+    permission: lifesteal.admin
+  withdraw:
+    description: Withdraw one of your hearts as an item.
+    usage: /withdraw
+    permission: lifesteal.withdraw
+  hearts:
+    description: Check how many hearts you have.
+    usage: /hearts
+
+permissions:
+  lifesteal.admin:
+    description: Use Lifesteal admin commands.
+    default: op
+  lifesteal.withdraw:
+    description: Withdraw hearts as items.
+    default: true
